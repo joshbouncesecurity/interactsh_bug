@@ -1,6 +1,6 @@
 # interactsh_bug
 
-To run this (with nuclei and python installed), run:
+To reproduce the bug, clone this repo and then run the following(with nuclei and python installed):
 
 ```bash
 run.sh
