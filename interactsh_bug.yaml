@@ -1,0 +1,30 @@
+id: interactsh_bug
+
+info:
+  name: interactsh_bug
+  author: josh
+  severity: low
+
+variables:
+  OAST: "{{interactsh-url}}"
+
+code:
+  - engine:
+      - python3
+    source: |
+      import os
+      import sys
+      url = os.getenv('OAST')
+      print(f'curl https://{url}')
+
+  - engine:
+      - sh
+      - bash
+    source: |
+      $code_1_response
+
+    matchers:
+      - type: word
+        part: interactsh_protocol
+        words:
+          - "dns"
