@@ -1,1 +1,1 @@
-GITHUB_ACTIONS=true nuclei -debug -t interactsh_bug.yaml -sign && nuclei -debug -t interactsh_bug.yaml -code -u 127.0.0.1
+nuclei -debug -t interactsh_bug.yaml -sign && GITHUB_ACTIONS=true nuclei -debug -t interactsh_bug.yaml -code -u 127.0.0.1
